@@ -1,0 +1,22 @@
+{
+  "backgroundImage": "/images/BgChess.jpg",
+  "title": "Chess Quiz",
+  "description": "Teste os seus conhecimentos sobre Xadrez",
+  "questions": [
+    {
+      "image": "https://rafaelleitao.com/wp-content/uploads/2019/09/curiosidade3.jpg",
+      "title": "Em qual ano surgiu o primeiro livro de xadrez?",
+      "description": "Escolha uma das opções",
+      "answer": 2,
+      "alternatives": [
+        "1456",
+        "1497",
+        "1502",
+        "1479"
+      ]
+    }
+  ],
+  "external": [
+    ""
+  ]
+}

@@ -17,7 +17,7 @@
     "sourceMap": true,
     "outDir": "./dist",
     "types": ["node"],
-    "noImplicitAny": false
+    "noImplicitAny": false,
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

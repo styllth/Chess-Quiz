@@ -8,8 +8,26 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', sans-serif;
+
+    color: ${({ theme }) => theme.colors.contrastText};
+    background: ${({ theme }) => theme.colors.background};
     font: 400 16px Roboto, sans-serif;
   }
+
+  html, body {
+    min-height: 100vh;
+  }
+
+  #__next {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
 `;
