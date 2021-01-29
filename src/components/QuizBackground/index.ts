@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 type QuizProps = {
-  backgroundImage: string;
+  bgImage: string;
 };
 
 const QuizBackground = styled.div`
   width: 100%;
   background-size: cover;
   background-position: center;
-  background-image: url(${({ backgroundImage }: QuizProps) => backgroundImage});
+  background-image: url(${({ bgImage }: QuizProps) => bgImage});
   background-color: ${({ theme }) => theme.colors.mainBg};
   flex: 1;
   @media screen and (max-width: 500px) {
@@ -21,7 +21,7 @@ const QuizBackground = styled.div`
           transparent,
           ${({ theme }) => theme.colors.mainBg}
         ),
-        url(${({ backgroundImage }) => backgroundImage});
+        url(${({ bgImage }) => bgImage});
       display: block;
       width: 100%;
       height: 210px;

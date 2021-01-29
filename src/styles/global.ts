@@ -16,7 +16,7 @@ export default createGlobalStyle`
     font-family: 'Lato', sans-serif;
 
     color: ${({ theme }) => theme.colors.contrastText};
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.mainBg};
     font: 400 16px Roboto, sans-serif;
   }
 

@@ -1,31 +1,33 @@
 import { useRouter } from 'next/router';
 import { useState } from 'react';
-// import { Container } from './styles';
+import Button from '../Button';
+import Input from '../Input';
 
 const QuizForm: React.FC = () => {
   const router = useRouter();
   const [name, setName] = useState('');
 
-  return (<form onSubmit={function (infosDoEvento) {
-    infosDoEvento.preventDefault();
-    router.push(`/quiz?name=${name}`);
-    console.log('Fazendo uma submissão por meio do react');
-  }}
-  >
-    <input
-      onChange={function (infosDoEvento) {
-        console.log(infosDoEvento.target.value);
-        // State
-        // name = infosDoEvento.target.value;
-        setName(infosDoEvento.target.value);
+  return (
+    <form
+      onSubmit={eForm => {
+        eForm.preventDefault();
+        localStorage.setItem('name', name);
+        router.push(`/quiz?name=${name}`);
       }}
-      placeholder="Diz ai seu nome"
-    />
-    <button type="submit" disabled={name.length === 0}>
-      Jogar
-      {name}
-    </button>
-  </form>)
-}
+    >
+      <Input
+        name="userName"
+        onChange={eInput => {
+          setName(eInput.target.value);
+        }}
+        placeholder="Seu Nome ..."
+        value={name}
+      />
+      <Button type="submit" disabled={name.length === 0}>
+        Jogar
+      </Button>
+    </form>
+  );
+};
 
 export default QuizForm;

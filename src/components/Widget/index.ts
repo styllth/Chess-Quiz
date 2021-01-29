@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Widget = styled.div`
-  margin-top: 24px;
+  margin-top: 14px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.mainBg};
@@ -39,6 +39,7 @@ export const WidgetContent = styled.div`
   padding: 24px 32px 32px 32px;
   & > *:first-child {
     margin-top: 0;
+    margin-bottom: 10px;
   }
   & > *:last-child {
     margin-bottom: 0;
