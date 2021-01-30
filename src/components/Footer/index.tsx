@@ -1,3 +1,4 @@
+import { HTMLMotionComponents } from 'framer-motion/types/render/dom/types';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
@@ -24,7 +25,7 @@ const FooterWrapper = styled.footer`
   }
 `;
 
-const Footer: React.FC = props => {
+const Footer: React.FC<any> = props => {
   return (
     <FooterWrapper {...props}>
       <a href="https://www.alura.com.br/">
